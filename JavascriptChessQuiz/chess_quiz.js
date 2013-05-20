@@ -234,7 +234,7 @@ $(function(){
 	// Well, I tried this but was getting the "same origin not allowed" error.
 	// So you have to have it running from a web server, e.g. from Eclipse, can't just
 	// load index.html into Chrome or a browser to run....
-	//$("#buttons_list").load('questions.html .buttonsList');
+	$("#buttons_list").load('questions.html .buttonsList');
 	
     // Pre-load all image links  
 	var image = null;
