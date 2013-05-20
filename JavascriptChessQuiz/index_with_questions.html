@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Chess Quiz</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="jquery-1.9.1.js"></script>
+    <script src="chess_quiz.js"></script>
+</head>
+
+<body>
+<section  id="display_area">
+	
+	<div id="button_wrapper">
+		<button type="button" name="startButton" 
+			onClick="clickButton()">Start the Quiz!</button>
+	</div>
+    <h1>The King's Game: A Quiz</h1>
+
+    <h2 id="caption"> </h2>
+    <p>
+    	<img src="images/Chess-Donors1.jpg" alt="Chess Pieces" title="Chess Pieces" id="quizImage">
+    </p>
+	
+	<div id="quizDisplay" class="notVisible">
+		<hr />
+		<p id="questionsContainer" class="questionsText">
+		</p>
+		<p class="dummy"> </p>
+		<hr />
+		<hr />
+		<div id="buttonsContainer">
+		</div>
+		<p class="dummy"> </p>
+		<hr />
+		<button type="button" id="nextQuestionButton">Next question</button>
+	</div>
+	
+</section>
+
+
+    <div id="questions_list">
+        <p class="questionText">Your friend sets up this chessboard and is ready to begin a game.  Before you start, double-check that all is well and select the radio button which best describes the layout.</p>
+		<p class="questionText">Your friend has now set up this chessboard, and is anxious to begin the game.  Which radio button best describes the layout?</p>
+		<p class="questionText">The game is afoot!  Which of these is a valid first move, to begin the game?</p>
+		<p class="questionText">Now each player has made one move.  Which of these moves would be a valid next move in the game?</p>	
+		<p class="questionText">In the modern game of chess, which piece is the most powerful piece on the board?</p>
+		<p class="questionText">We are in the mid-game, now.  White just moved his pawn from e2 to e4, so it's Black's turn to move.  Which of these would be a valid move?</p>
+		<p class="questionText">It's Black's move.  If Black chose to castle to the king's side, what would your immediate response be?</p>
+		<p class="questionText">Neither player has moved their king, nor either rook.  In this position, which player may castle if it is their turn now?</p>
+		<p class="questionText">In the modern chess game, which piece is the most important piece on the board?</p>
+		<p class="questionText">It's White's turn, and he chooses to move his pawn to f8.  What is the most likely thing to happen now?</p>
+	</div>
+
+	<div id="buttons_list">
+		<div class="buttonsList" id="buttons01">
+		<table>
+			<tr>
+			<td><input type="radio" name="quest01" value="swaprooks">Not yet: swap rooks/bishops</td>
+			<td><input type="radio" name="quest01" value="play">Looks great -- let's play!</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest01" value="swapknights">Not yet: swap lances/bishops</td>
+			<td><input type="radio" name="quest01" class="right" value="spinboard">Not yet: board's oriented wrong</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest01" value="swapqueens">Not yet: swap kings/queens</td>
+			<td><input type="radio" name="quest01" value="swapknights">Not yet: swap knights/bishops</td>
+			</tr>
+		</table>
+		</div>
+
+		<div class="buttonsList" id="buttons02">
+		<table>
+			<tr>
+			<td><input type="radio" name="quest02" value="swaplances">Not yet: swap lances/bishops</td>
+			<td><input type="radio" name="quest02" value="spinboard">Not yet: board's oriented wrong</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest02" value="swaprooks">Not yet: swap rooks/bishops</td>
+			<td><input type="radio" name="quest02" value="play">Looks great -- let's play!</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest02" value="swapqueens">Not yet: swap kings/queens</td>
+			<td><input type="radio" name="quest02" class="right" value="swapknights">Not yet: swap knights/bishops</td>
+			</tr>
+		</table>
+
+		</div>
+		<div class="buttonsList" id="buttons03">
+		<table>
+			<tr>
+			<td><input type="radio" name="quest03" value="bishop">Bishop to h3</td>
+			<td><input type="radio" name="quest03" value="knight">Knight to f6</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest03" value="pawnx2">Pawn to c5</td>
+			<td><input type="radio" name="quest03" value="pawn">Pawn to f6</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest03" value="knight2">Bishop to c3</td>
+			<td><input type="radio" name="quest03" class="right" value="bishop2">Pawn to a4</td>
+			</tr>
+		</table>
+		</div>
+
+		<div class="buttonsList" id="buttons04">
+		<table>
+			<tr>
+			<td><input type="radio" name="quest04" value="bishopy">Bishop to f3</td>
+			<td><input type="radio" name="quest04" value="bishopL">Bishop to a3</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest04" class="right" value="pawn2x">Pawn to e4</td>
+			<td><input type="radio" name="quest04" value="pawn3x">Pawn to d5</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest04" value="king">King to c3</td>
+			<td><input type="radio" name="quest04" value="knight">Knight to e5</td>
+			</tr>
+		</table>
+		</div>
+
+		<div class="buttonsList" id="buttons05">
+		<table>
+			<tr>
+			<td><input type="radio" name="quest05" value="lance">The lance</td>
+			<td><input type="radio" name="quest05" value="knight">The knight</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest05" value="rook">The rook</td>
+			<td><input type="radio" name="quest05" class="right" value="queen">The queen</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest05" value="pawn">The pawn</td>
+			<td><input type="radio" name="quest05" value="dragon">The dragon</td>
+			</tr>
+		</table>
+		</div>
+
+		<div class="buttonsList" id="buttons06">
+		<table>
+			<tr>
+			<td><input type="radio" name="quest06" value="06_knight">Knight to f6</td>
+			<td><input type="radio" name="quest06" value="06_bishop">Bishop to h6</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest06" value="06_castleOO">Castle to King's side</td>
+			<td><input type="radio" name="quest06" value="06_castleOOO">Castle to Queen's side</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest06" value="06_pawn1">Capture pawn at b3</td>
+			<td><input type="radio" name="quest06" class="right" value="06_pawnx">Pawn to c3, kills pawn on c4 </td>
+			</tr>
+		</table>
+		</div>
+		
+		<div class="buttonsList" id="buttons07">
+		<table>
+			<tr>
+			<td><input type="radio" name="quest07" value="07_sure">"OK, if you're sure..."</td>
+			<td><input type="radio" name="quest07" value="07_over">"I give up; you've won."</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest07" class="right" value="07_illegal">"That's an illegal move."</td>
+			<td><input type="radio" name="quest07" value="07_finally">"It's about time!"</td>
+			</tr>
+		</table>
+		</div>
+		
+		<div class="buttonsList" id="buttons08">
+		<table>
+			<tr>
+			<td><input type="radio" name="quest08" value="08_white1">White O-O-O, but not O-O</td>
+			<td><input type="radio" name="quest08" class="right" value="08_white2">White O-O, but not O-O-O</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest08" value="08_black1">Black O-O, but not O-O-O</td>
+			<td><input type="radio" name="quest08" value="08_neither">Neither player may castle</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest08" value="08_black2">Black may castle either way.</td>
+			<td><input type="radio" name="quest08" value="08_both">White may either way, Black only O-O-O</td>
+			</tr>
+		</table>
+		</div>
+
+		<div class="buttonsList" id="buttons09">
+		<table>
+			<tr>
+			<td><input type="radio" name="quest09" value="09_rookie">The rook</td>
+			<td><input type="radio" name="quest09" value="09_queenie">The queen</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest09" value="09_pawnie">The pawn</td>
+			<td><input type="radio" name="quest09" class="right" value="09_kingie">The king</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest09" value="09_bishopy">The bishop</td>
+			<td><input type="radio" name="quest09" value="09_vizier">The vizier</td>
+			</tr>
+		</table>
+		</div>
+
+		<div class="buttonsList" id="buttons10">
+		<table>
+			<tr>
+			<td><input type="radio" name="quest10" value="10_rook">The pawn may be traded in, but only for a rook</td>
+			<td><input type="radio" name="quest10" value="10_two">White chooses two new pieces to replace the pawn</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest10" value="10_queen1">White trades his pawn for the only piece he may promote to: a queen</td>
+			<td><input type="radio" name="quest10" value="10_knight">The pawn changes to a knight, since he still has one on the board</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest10" value="10_rookie">White must choose a rook or a queen to promote his pawn into</td>
+			<td><input type="radio" name="quest10" class="right" value="10_fork">White opts to promote to a knight, to fork Black's queen</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+
+	<div id="image_list"> 
+        <img src="images/Chess-Donors1.jpg" alt="Chess Pieces" title="Chess Pieces Title" class="myImage"/>
+        <img src="images/chessboard001.gif" alt="01 Basics" title="Basics Title" class="myImage"/>
+		<img src="images/chess00002.png" alt="02 Positions" title="Positions Title"  class="myImage"/>
+		<img src="images/chess003.png" alt="03 Beginning" title="Beginning Title"  class="myImage"/>
+		<img src="images/chess04.png" alt="04 Early" title="Early Title"  class="myImage"/>
+		<img src="images/chess005.jpg" alt="05 Power" title="Power Title"  class="myImage"/>
+		<img src="images/chess06.png" alt="06 Details" title="Details Title"  class="myImage"/>
+		<img src="images/chess007Castling.png" alt="07 Castling" title="Beginning Title"  class="myImage"/>
+		<img src="images/chess008Qcastle.png" alt="08 Completion" title="Completion Title"  class="myImage"/>
+		<img src="images/chess9.png" alt="09 Paramount" title="Paramount Title"  class="myImage"/>
+		<img src="images/chess10.jpg" alt="10 Promoting" title="Promoting Title"  class="myImage"/>
+	</div>
+	
+</body>
+</html>

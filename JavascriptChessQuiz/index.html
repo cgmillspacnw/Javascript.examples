@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Chess Quiz</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="jquery-1.9.1.js"></script>
+    <script src="jquery.animate-colors"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="chess_quiz.js"></script>
+</head>
+
+<body>
+<section  id="display_area">
+	
+	<div id="button_wrapper">
+		<button type="button" name="startButton" 
+			onClick="clickButton()">Start the Quiz!</button>
+	</div>
+    <h1>The King's Game: A Quiz</h1>
+
+    <h2 id="caption"> </h2>
+    <p>
+    	<img src="images/Chess-Donors1.jpg" alt="Chess Pieces" title="Chess Pieces" id="quizImage">
+    </p>
+	
+	<div id="quizDisplay" class="notVisible">
+		<hr />
+		<p id="questionsContainer" class="questionsText">
+		</p>
+		<p class="dummy"> </p>
+		<hr />
+		<hr />
+		<div id="buttonsContainer">
+		</div>
+		<p class="dummy"> </p>
+		<hr />
+		<button type="button" id="nextQuestionButton">Next question</button>
+	</div>
+	
+</section>
+
+
+    <div id="questions_list">
+        <p class="questionText">Your friend sets up this chessboard and is ready to begin a game.  Before you start, double-check that all is well and select the radio button which best describes the layout.</p>
+		<p class="questionText">Your friend has now set up this chessboard, and is anxious to begin the game.  Which radio button best describes the layout?</p>
+		<p class="questionText">The game is afoot!  Which of these is a valid first move, to begin the game?</p>
+		<p class="questionText">Now each player has made one move.  Which of these moves would be a valid next move in the game?</p>	
+		<p class="questionText">In the modern game of chess, which piece is the most powerful piece on the board?</p>
+		<p class="questionText">We are in the mid-game, now.  White just moved his pawn from e2 to e4, so it's Black's turn to move.  Which of these would be a valid move?</p>
+		<p class="questionText">It's Black's move.  If Black chose to castle to the king's side, what would your immediate response be?</p>
+		<p class="questionText">Neither player has moved their king, nor either rook.  In this position, which player may castle if it is their turn now?</p>
+		<p class="questionText">In the modern chess game, which piece is the most important piece on the board?</p>
+		<p class="questionText">It's White's turn, and he chooses to move his pawn to f8.  What is the most likely thing to happen now?</p>
+	</div>
+
+	<div id="buttons_list">
+
+	</div>
+	
+	<div id="image_list"> 
+        <img src="images/Chess-Donors1.jpg" alt="Chess Pieces" title="Chess Pieces Title" class="myImage"/>
+        <img src="images/chessboard001.gif" alt="01 Basics" title="Basics Title" class="myImage"/>
+		<img src="images/chess00002.png" alt="02 Positions" title="Positions Title"  class="myImage"/>
+		<img src="images/chess003.png" alt="03 Beginning" title="Beginning Title"  class="myImage"/>
+		<img src="images/chess04.png" alt="04 Early" title="Early Title"  class="myImage"/>
+		<img src="images/chess005.jpg" alt="05 Power" title="Power Title"  class="myImage"/>
+		<img src="images/chess06.png" alt="06 Details" title="Details Title"  class="myImage"/>
+		<img src="images/chess007Castling.png" alt="07 Castling" title="Beginning Title"  class="myImage"/>
+		<img src="images/chess008Qcastle.png" alt="08 Completion" title="Completion Title"  class="myImage"/>
+		<img src="images/chess9.png" alt="09 Paramount" title="Paramount Title"  class="myImage"/>
+		<img src="images/chess10.jpg" alt="10 Promoting" title="Promoting Title"  class="myImage"/>
+	</div>
+	
+</body>
+</html>

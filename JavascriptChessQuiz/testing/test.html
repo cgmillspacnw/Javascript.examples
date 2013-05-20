@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>T E S T</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="jquery-1.9.1.js"></script>
+    <script src="test.js"></script>
+</head>
+
+<body>
+<section  id="display_area">
+	
+	<div id="button_wrapper">
+		<button type="button" name="startButton" 
+			onClick="clickButton()">Start the Quiz!</button>
+	</div>
+    <h1>The King's Game: A Quiz</h1>
+
+    <h2 id="caption"> </h2>
+    <p>
+    	<img src="Chess-Donors1.jpg" alt="Chess Pieces" title="Chess Pieces" id="quizImage">
+    </p>
+	
+		
+	<div id="quizDisplay" class="notVisible">
+		<hr />
+		<p id="questionsContainer" class="questionsText">
+		</p>
+		<hr />
+		<div id="buttonsContainer">fttt
+		</div>
+		<hr />
+		<hr />
+		<button type="button" id="nextQuestionButton">Next question</button>
+	</div>
+	
+	
+</section>
+
+    <div id="questions_list">
+        <p class="questionText" title="01 Basics">Your friend sets up this chessboard and is ready to begin a game.  Before you start, double-check that all is well and select the radio button which best describes the layout.</p>
+		<p class="questionText" title="02 Positions">Your friend sets up this chessboard, and is ready to begin the game.  Which radio button best describes the layout?</p>
+		<p class="questionText" title="03 Beginning">The game is afoot!  Which of these is a valid first move, to begin the game?</p>
+		<p class="questionText" title="04 Early Game">Now each player has made one move.  Which of these moves would be a valid next move?</p>	
+		<p class="questionText" title="05 Power">In the modern game of chess, which piece is the most powerful piece on the board?</p>
+		<p class="questionText" title="06 Details">We are in the mid-game, now.  Black just moved his pawn to b5, so it's White's turn to move.  Which of these would be a valid move?</p>
+		<p class="questionText" title="07 Castling">It's White's move.  If White chose to castle to the king's side, what would you tell them?</p>
+		<p class="questionText" title="08 Completion">It's White's move.  If White chose to castle to the king's side, where would the king be at the end of White's turn?</p>
+		<p class="questionText" title="09 Castling Queen's Side">It's White's move.  If White chose to castle to the queen's side, where would the king be at the end of White's turn?</p>
+		<p class="questionText" title="10 Paramount">In the modern chess game, which piece is the most important piece on the board?</p>
+		<p class="questionText" title="11 Promoting">It's White's turn, and he chooses to move his pawn to f8.  What is the most likely thing to happen now?</p>
+	</div>
+
+	<div id="buttons_list">
+		<div class="buttonsList" id="buttons01">
+		<table>
+			<tr>
+			<td><input type="radio" name="quest01" value="swaprooks">Not yet: swap rooks & bishops</td>
+			<td><input type="radio" name="quest01" value="play">Looks great -- let's play!</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest01" value="swapknights">Not yet: swap lances & bishops</td>
+			<td><input type="radio" name="quest01" value="spinboard">Not yet: board is oriented wrong</td>
+			</tr>
+			<tr>
+			<td><input type="radio" name="quest01" value="swapqueens">Not yet: swap kings & queens</td>
+			<td><input type="radio" name="quest01" value="swapknights">Not yet: swap knights & bishops</td>
+			</tr>
+		</table>
+		</div>
+
+		<div class="buttonsList" id="buttons02">
+			<input type="radio" name="quest02" value="swaprooks" label="Not yet... swap rooks & bishops">
+			<input type="radio" name="quest02" value="play" label="Looks great -- let's play!"><br />
+			<input type="radio" name="quest02" value="swapknights" label="Not yet... swap lances & bishops">
+			<input type="radio" name="quest02" value="spinboard" label="Not yet... board is oriented wrong"><br />
+			<input type="radio" name="quest02" value="swapqueens" label="Not yet... swap kings & queens">
+			<input type="radio" name="quest02" value="" label="Not yet... swap knights & bishops"><br />
+		</div>
+		<div class="buttonsList" id="buttons03">
+			<div class="leftOptions">
+				<input type="radio" name="quest03" value="" label="">
+				<input type="radio" name="quest03" value="" label=""><br />
+				<input type="radio" name="quest03" value="" label="">
+			</div>
+			<div class="rightOptions">
+				<input type="radio" name="quest03" value="" label=""><br />
+				<input type="radio" name="quest03" value="" label="">
+				<input type="radio" name="quest03" value="" label=""><br />
+			</div>
+
+		</div>
+	</div>
+	
+
+
+
+
+
+</body>
+</html>
