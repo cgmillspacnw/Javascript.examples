@@ -278,6 +278,7 @@ CGMApp.own.bridgeGame = (function() { 'use strict';
 		if ( 13 == (tricksWon + tricksLost) ) { 
 			
 			alert( "All 13 tricks have been played!  Load another hand to play again.");
+			// FUTURE here, maybe compare score to some who played the hand? Give 'em a "grade"?
 			
 			// Clean out the divs where cards were displayed...
 			clear_played_card_displays();
