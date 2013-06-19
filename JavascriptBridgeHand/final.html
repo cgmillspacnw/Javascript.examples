@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play a Bridge Hand</title>
+    <link rel="stylesheet" href="final.css">
+    <script src="jquery-1.9.1.js"></script>
+    <script src="jquery.animate-colors.js"></script>
+    <script src="jquery-ui-1.10.3.custom.js"></script>
+    <script src="CGMCore.js"></script>
+	<script src="playAI.js"></script>
+	<script src="final.js"></script>
+</head>
+
+<body>
+<section  id="display_area">
+	
+	<div id=myHeader>  <!-- make this 100% width -->
+	<h1>Play a Bridge Hand!</h1>
+		<div id="button_wrapper">
+		<button type="button" id="startButton">Start Playing!</button>
+		</div>
+	</div>
+	
+	
+	<div id="dummyDisplay">
+		<div id="leftMargin" class="dummyStuff">
+			<p id="leftysCards" class="debug">leftysCards: <br />
+		</div>
+		
+		<div id="dummysCards" class="dummyStuff">
+			<div id="dummySpades" class="dummySuit"></div>
+			<div id="dummyHearts"  class="dummySuit"></div>
+			<div id="dummyClubs" class="dummySuit"></div>
+			<div id="dummyDiamonds" class="dummySuit"></div>
+		</div>
+		
+		<div id="rightMargin" class="dummyStuff">
+<!-- 			<input id="toggleInstructs" type="button" value="Hide Instructions" /><br /> -->
+			<button type="submit" id="toggleInstructs">Hide Instructions</button>
+<!-- 			<input id="" type="button" value="Show Defenders'" /><br />  -->
+			<button type="submit" id="toggleDebugs">Show Defenders'</button>
+			<!-- <input id="toggleTrickMsg" type="button" value="Disable Trick Winner" /><br />  -->
+			<button type="submit" id="toggleTrickMsg">Disable Trick Winner</button>
+			Hand ID:<select id="selectHand">
+				<option value="1">01</option>
+				<option value="2">02</option>
+				<option value="3">03</option>
+				<option value="4">04</option>
+				<option value="5">Freaky</option>
+				<option value="6">06</option>
+				<option value="7">07</option>
+				<option value="8">08</option>
+				<option value="9">09</option>
+				<option value="10">TOO LONG</option>
+			</select>
+			<span id="handCanMake"></span><br />
+			<p id="rightysCards" class="debug">rightysCards: <br />
+			</p>
+			
+			<table id="tricksResults" border="1"> 
+				<tr>
+					<th colspan="2">TRICKS</th>
+				</tr>
+				<tr>
+					<th>Won</th>
+					<th>Lost</th>
+				</tr>
+				<tr>
+					<td id="tricksWon">0</td>
+					<td id="tricksLost">0</td>
+				</tr>
+			</table>	
+
+			
+<!--<table id="tricksResults">   -->
+		</div>
+	</div>		<!-- dummyDisplay -->
+	
+	<div id="cardPlayArea" >
+		<div id="LeftysCard" class="playArea">
+		</div>
+		<div id="RightysCard" class="playArea"></div>
+		<div id="cardPlay" class="playArea">
+			<div id="whatDummyPlayed"><p class="instructs">PLAY DUMMY'S CARD HERE</p></div>
+			<div id="whatIplayed"><p class="instructs">PLAY YOUR CARD HERE</p></div>
+		</div>
+	</div>		<!-- cardPlayArea -->
+
+	<div id="myCards">
+		<div id="myCardHolder"></div>
+	</div>
+	
+</section>
+	
+	<div id="image_list"> 
+        <img src="images/club_small.png" alt="Club" title="Club" class="myImage"/>
+        <img src="images/diamond_small.png" alt="Diamond" title="Diamond" class="myImage"/>
+		<img src="images/heart_small.png" alt="Heart" title="Heart"  class="myImage"/>
+		<img src="images/spade_small.png" alt="Spade" title="Spade"  class="myImage"/>
+	</div>
+	
+</body>
+</html>

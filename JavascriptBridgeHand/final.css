@@ -1,0 +1,240 @@
+/* type selectors */
+article, aside, figure, figcaption, footer, header, nav, section {
+    display: block;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;	/*500px;*/
+    margin: 0 auto;
+    padding: 20px;
+	background-color: #BFE3C3;
+    border: 3px solid green;
+}
+#display_area {
+	background-color: #E6D5D9;	/* override background color for display area */
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0;
+	
+}
+#button_wrapper {
+	width: 500px;
+	height: 50px;
+	/*display: table-cell;*/
+	/*vertical-align: middle;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+button {
+	height: 75px;
+	width: 200px;
+	font-weight: bold;
+}
+h1, h2, ul, p {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	padding-bottom: .25em;
+	color: green;
+	text-align: center;
+}
+h2 {
+	font-size: 120%;
+	padding: .5em 0;
+}
+
+#leftMargin {
+	width: 25%;
+	/*background-color: green;*/
+} 
+#dummyDisplay {
+	height: 480px;
+}
+.dummyStuff {
+	height: 480px;
+	float: left;
+}
+.dummysCard {
+	position: absolute;
+}
+
+#dummysCards {
+	width: 50%;
+	background-color: #CDB2CF;
+	
+}
+.dummySuit {
+	width: 16%;
+	border-style: solid black 1px;
+	height: 440px;
+	float: left;
+	margin: 2%;
+	padding: 2%;
+	/*background-color: blue;*/
+	position: relative;
+}
+/* This is the 'umbrella' class for the card "image" (div) */
+.singleCard {
+	/*position: absolute;*/
+	width: 75%;
+	height: 100px;
+	background-color: white;
+	border: solid black 1px;
+	font-size: 2.5em;
+}
+
+/* This is set when the card is dragged from dummy or my hand and played */
+.playedCard {
+	margin-right: auto;
+	margin-left: auto;
+	height: 100px;
+	background-color: white;
+	border: solid black 1px;
+	font-size: 2.5em;
+	color: #000000;		/* Have to have black text */
+}
+
+#rightMargin {
+	width: 25%;
+	background-color: #DFF1D5;	/* light mint green */
+	/*background-color: black;
+	color: #FFFFFF;*/
+	/*border: dashed black 1px;*/  /* WHY does a border throw ALL of this positioning off??? */
+}
+
+/* This is the area where we drop dummy's card to play it  */
+#whatDummyPlayed {
+	width: 50%;
+	height: 120px;
+	/*background-color: brown;*/
+	float: left;
+	text-align: center;
+	color: #444444;
+	/*border: dotted black 1px;*/  /* MUCKS with display...makes it block? or non-floatable?? */
+}
+#cardPlayArea { 
+	height: 240px;
+	width: 100%;
+}
+#cardPlay {
+	height: 240px;
+	width: 100%;
+}
+.playArea {
+	height: 240px;
+	width: 100%;
+}
+
+/* This is the area where we drop my hand's card to play it  */
+#whatIplayed {
+	width: 50%;
+	height: 120px;
+	/*background-color: blue;*/
+	float: left;
+	text-align: center;
+	color: #444444;
+	/*border: dotted black 1px;*/  /* MUCKS with display...makes it block? or non-floatable?? */
+}
+
+/* This is the div that holds my hand */ 
+#myCards {
+	height: 120px;
+	/*background-color: pink;*/
+	position: relative;
+}
+
+/* This is set for ONLY cards in my hand */
+.cardIsMine {
+	float: left;
+}
+.cardIsLeftys {
+	vertical-align: middle;
+	float: right;
+}
+.cardIsRightys {
+	vertical-align: middle;
+	float: left;
+}
+/* Here are the divs where we'll add our cards in our hand */
+#myCardHolder {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+#LeftysCard {
+	width: 25%;
+	/*background-color: yellow;*/
+	float: left;
+	display: table-cell;
+}
+#RightysCard {
+	width: 25%;
+	/*background-color: orange;*/
+	float: right;
+	display: table-cell;
+}
+
+#RightysCard p {
+	font-size: 2.50em;
+}
+#LeftysCard p {
+	font-size: 2.50em;
+	text-align: right;
+}
+
+table { 
+	border: 1px solid red;
+	border-collapse: separate;
+	font-size: 1.25em;
+	margin-top: 75px;
+	margin-right: auto;
+	margin-left: auto;
+}
+th {
+	background-color: #ADC1A1;		/* grey */
+	background-color: #BFE3C3;	/* my mint green */
+	background-color: #DFF1D5;	/* light mint green */
+	background-color: #9AE39C;
+	color: black;
+}
+td {
+	text-align: center;
+	background-color: #DFF1D5;	/* light mint green */
+	color: black;
+}
+.leftOptions {
+	float: left;
+}
+.rightOptions {
+	float: right;
+}
+button {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	padding: 0.75em;
+	font-weight: bold;
+	height: 50px;
+	width: 200px;
+}
+
+.centerMe {
+	margin-left: auto;
+	margin-right: auto;
+}
+.notVisible {
+	display: none;
+}
+.debug {
+	position: bottom;
+}
+#display_area img  {
+	display: in-line;/*block;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#image_list {
+	display: none;
+}
