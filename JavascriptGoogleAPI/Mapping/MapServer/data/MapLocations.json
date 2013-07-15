@@ -1,0 +1,37 @@
+[
+    {
+        "locationName": "Seattle, WA",
+        "latitude": "47.37",
+        "longitude": "-122.20",
+        "description": "The Emerald City",
+        "itemName": "item00"
+    },
+    {
+        "locationName": "Sidney, NE",
+        "latitude": "41.125",
+        "longitude": "-103.00",
+        "description": "Craig's home town",
+        "itemName": "item01"
+    },
+    {
+        "locationName": "Cheyenne, WY",
+        "latitude": "41.126953",
+        "longitude": "-104.835663",
+        "description": "Craig's sister lives here",
+        "itemName": "item02"
+    },
+    {
+        "locationName": "Alliance, NE",
+        "latitude": "42.101389",
+        "longitude": "-102.870278",
+        "description": "Carhenge monument",
+        "itemName": "item03"
+    },
+    {
+        "locationName": "Winthrop, WA",
+        "latitude": "48.478384",
+        "longitude": "-120.184078",
+        "description": "Lisa's cabin",
+        "itemName": "item04"
+    }
+]

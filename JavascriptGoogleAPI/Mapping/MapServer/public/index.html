@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>Locations</title>
+	
+		<script src="cordova-2.3.0.js"></script>
+		<script src="jquery.js"></script>
+		
+	<script src="js/CGMMap.js"> </script>
+	<script src="js/utilities.js"> </script>
+	<script src="js/index.js"></script>
+	<script src="js/Display.js"> </script>
+	<script src="js/MapLocations.js"> </script>
+	<script src="js/MapLocationsEasy.js"> </script>
+
+
+	</head>
+	<body>
+
+
+
+		<div data-role="page" id="page1" data-theme="b">
+
+			<div data-role="header"><h1>Page One</h1></div>
+
+			<!-- /header -->
+
+			<div data-role="content">
+				<div class="app">
+					<p>Using jQuery Mobile</p>
+					<div id="deviceready" class="blinkNot">
+						<p class="event listening">Connecting to Device</p>
+						<p class="event received">Device is Ready</p>
+						<p id="curDate"> </p>
+						
+						<div class="addForm">
+							<span class="rowName">City:</span> <input id="locationName" name="firstName" type="text">
+						</div>
+						<div class="addForm">
+							<span class="rowName">Latitude:</span> <input id="latitude" name="latitude" type="text">
+						</div>
+						<div class="addForm">
+							<span class="rowName">Longitude:</span> <input id="longitude" name="longitude" type="text">
+						</div>
+						<div class="addForm">
+							<span class="rowName">Description:</span> <input id="description" name="description" type="text">
+						</div>
+		
+						<button id="getLocations">Get Cities</button>
+						<button id="saveLocations">Save Cities</button>				
+					    <button id="insertLocation">Insert City</button>
+					    <button id="deleteItem">Delete City</button>				
+						<button id="clearFields">Clear Fields</button>
+				
+						<section id=responseGroup>
+							<ul id="response"  name='responseGroup'> </ul>	
+						</section>
+						<ul id='debug'> </ul>
+		
+								<a href="#page2" data-role="button" data-icon="star">Go to Page Two</a>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- /content -->
+
+		</div>
+
+		<!-- /page -->
+
+		<div data-role="page" id="page2" data-theme="b">
+
+			<div data-role="header"><h1>Page Two</h1></div><!-- /header -->
+
+			<div data-role="content">
+				<p>
+					US Presidents
+				</p>
+				<ul data-role="listview" data-inset="true" data-filter="true">
+					<li><a href="#">George Washingon</a></li>
+					<li><a href="#">John Adams</a></li>
+					<li><a href="#">Thomas Jefferson</a></li>
+					<li><a href="#">James Madison</a></li>
+					<li><a href="#">James Monroe</a></li>
+				</ul>
+				<a href="#page1" data-role="button" data-icon="star">Back to Page One</a>
+			</div><!-- /content -->
+
+		</div><!-- /page -->
+		
+	</body>
+</html>

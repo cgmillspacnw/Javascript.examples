@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/GeoCode.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>Fun with Locations</title>
+	
+		<script src="cordova-2.3.0.js"></script>
+		<script src="jquery.js"></script>
+		<script src="jquery.mobile-1.2.0.js"></script>
+		<script src="js/CGMMap.js"> </script>
+		<script src="js/utilities.js"> </script>
+		<script src="js/index.js"></script>
+		<script src="js/Display.js"> </script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script src="js/MapLocations.js"> </script>
+		<script src="js/MapLocationsEasy.js"> </script>
+		<script src="js/Directions.js"></script>
+		<script src="js/GeoCode.js"></script>
+	</head>
+
+	<body>
+        <div data-role="page" id="page1" data-theme="b">
+            <div data-role="header">
+                <h1>Page One</h1>
+            </div>           <!-- /header -->
+            
+            <div data-role="content">                
+                <div class="app">
+	                
+	                <p>PROG 272 Final (Mills)</p>
+	                <div id="deviceready" class="blink">
+	                    <p class="event listening">Connecting to Device</p>
+	                    <p class="event received">Device is Ready</p>
+	                    <p id="curDate"> </p>
+	                
+	                	<div id="inputSection">
+						<input id="address" type="text" value="Bellevue, WA">
+						<input id="getDirections" type="button" value="Get Directions">
+						<p id="position"> </p>
+						</div>
+						
+						<div id="mainDiv">
+							<div id="mapCanvas"> </div>
+							<div id="directions"><p></p> </div>
+						</div>
+						
+				    	<ul id="error"> </ul>
+								
+						<div class="dontOverlap">
+							<a href="#page2" data-role="button" data-icon="star">Go to Page Two</a>
+		                    <a href="#page3" data-role="button" data-icon="star">Go to Page Three</a>
+						</div>
+	
+					</div>	<!-- deviceready -->
+				</div>	<!-- app -->
+            </div>	 <!-- /content -->
+        </div>		<!-- /page -->
+
+
+		<div data-role="page" id="page2" data-theme="b">
+
+			<div data-role="header">
+				<h1>Page Two</h1>
+			</div>		<!-- /header -->
+
+			<div data-role="content">
+				<p>City Information</p>
+				
+				
+				
+				<!--  for later?
+				<div data-role="fieldcontain">
+					<select name="select-choice-city" class="rowName" id="select-choice-city" data-native-menu="false">
+						<option>Choose a city...</option>
+						<option value="standard">Standard: 7 day</option>
+						<option value="rush">Rush: 3 days</option>
+						<option value="express">Express: next day</option>
+						<option value="overnight">Overnight</option>
+					</select>
+				</div>
+				-->  
+				
+				<section id=responseGroup>
+					<ul id="response" data-role="listview" name='responseGroup' data-inset="true"> </ul>	
+				</section>
+
+				
+				<div class="addForm">
+					<span class="rowName">City</span> <input id="locationName" name="firstName" type="text">
+				</div>
+				<div class="addForm">
+					<span class="rowName">Latitude</span> <input id="latitude" name="latitude" type="text">
+				</div>
+				<div class="addForm">
+					<span class="rowName">Longitude</span> <input id="longitude" name="longitude" type="text">
+				</div>
+				<div class="addForm">
+					<span class="rowName">Description</span> <input id="description" name="description" type="text">
+				</div>
+				<button id="getLocations">Get Cities</button>
+				<button id="saveLocations">Save Cities</button>				
+				<button id="insertLocation">Insert City</button>
+				<button id="deleteItem">Delete City</button>				
+				<button id="clearFields">Clear Fields</button>
+				
+				<ul id='debug'> </ul>
+				<a href="#page1" data-role="button" data-icon="star">Go to Page One</a>
+				<a href="#page3" data-role="button" data-icon="star">Go to Page Three</a>
+			</div>		<!-- /content -->
+		</div> 		<!-- /page -->
+
+        <div data-role="page" id="page3" data-theme="b">
+
+            <div data-role="header">
+                <h1>Page Three</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <p>US Presidents</p>
+                <ul id="presList" data-role="listview" data-inset="true" data-filter="true">
+                    <li><a href="#">Rocky and Bullwinkle</a></li>
+                    <li><a href="#">Babba Louie</a></li>
+                    <li><a href="#">Daffy Duck</a></li>
+                    <li><a href="#">Bugs Bunny</a></li>
+                    <li><a href="#">Pepe Le Pew</a></li>
+                </ul>
+                <a href="#page1" data-role="button" data-icon="star">Go to Page One</a>
+                <a href="#page2" data-role="button" data-icon="star">Go to Page Two</a>
+            </div><!-- /content -->
+
+        </div><!-- /page -->
+
+	
+
+
+	</body>
+</html>
