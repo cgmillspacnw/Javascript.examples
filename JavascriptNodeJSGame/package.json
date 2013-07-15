@@ -1,0 +1,17 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "openid": "latest",
+	"mkdirp": "latest",
+    "express": "3.2.6",
+	"nano": "latest",
+    "handlebars": "latest",
+    "jade": "*",
+    "stylus": "*"
+  }
+}

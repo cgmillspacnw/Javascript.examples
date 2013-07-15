@@ -1,0 +1,4 @@
+{
+	"myIPAddress": "http://localhost:30025",
+	"myCouchDBAddress": "http://localhost:5984"
+}

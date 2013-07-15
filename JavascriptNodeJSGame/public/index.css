@@ -1,0 +1,33 @@
+html
+{
+	height: 100%;
+}
+/*#statsContainer {
+	float: left;	
+}
+*/
+#columnsContainer {
+	width: 750px;
+	margin: 0 auto;
+	background: #99c;
+}
+#leftie {
+	float: left;
+	/*width: 60%;*/
+}
+#rightie {
+	float: left;
+	/*width: 40%;*/
+}
+
+#myOptions {
+	background-color: #F0D681;
+}
+/* Remove bullets from list o' stats: */
+.charStats { 
+	list-style-type: none;
+	/*float: left;*/
+}
+.noShow {
+	display: none;
+}

@@ -1,0 +1,85 @@
+div #testScoreContainer {
+	width: 510px;
+	height: auto;
+	postion: relative;
+	background-color: #BED9EB;
+	margin: 0px;
+}
+#header {
+	width: 510px;
+	margin: 0;/*.5em;*/
+	background-color: #F1F2E9;
+	text-align: center;
+}
+#footer {
+	width: 500px;
+	margin: 0.5em;
+	font-style: italic;
+}
+#buttonContainer {
+	width: 500px;
+	height: 60px;
+	margin: 0.5em;
+	display: table-cell;
+	vertical-align: middle;
+}
+button {
+	display: block;
+	height: 50px;
+	width: 80px;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+}
+#scoreResults {
+	width: 510px;
+	margin: 0;/*.5em;*/
+	background-color: #CCF2C7;
+	text-align: center;
+}
+#scoreResults p:first-child {
+	background-color: #F0C96E;
+}
+#debugScoring {
+	width: 500px;
+	margin: 0.5em;
+	background-color: #F25265;
+	text-align: center;
+}
+#tableContainer {
+	width: 510px;
+	margin: 0;/*.5em;*/
+}
+
+#heroTable, #foeTable {
+	width:250px;
+}
+
+#heroTable
+{ 
+	float:left;
+}  
+
+/*
+#foeTable
+{ 
+	float:right   
+}  
+*/
+
+table {
+	border-collapse: separate; 
+	border: 4px blue;
+	border-style: inset;
+}
+
+th, td {
+ 	border: 3px solid orange;
+ }
+
+th {
+	background-color: #D1F0E4;
+}
+td.trait {
+	font-weight: bold;
+}

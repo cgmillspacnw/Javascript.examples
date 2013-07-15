@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Craig Mills Grid Game</title>
+        <meta name="description" content="Demo basics of HTML5 Canvas Object" />
+        <meta name="author" content="cgm" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- ?? Link in ALL css here?  I think I can do that dynamically? -->
+		<link href="index.css" rel="stylesheet" type="text/css">
+        <link href="testScoring.css" rel="stylesheet" type="text/css">
+        <script src="jquery.js"></script>
+        <script src="handlebars.js"></script>
+		<script src="CGMAppCore.js"></script>
+		<!--  <script src="KeyboardStuff.js"></script>   Just can't seem to get this working -->
+		<script src="Draw.js"></script>
+		<script src="Display.js"></script>
+		<script src="Characters.js"></script>
+		<script src="AjaxBase.js"></script>
+		<script src="FileLoad.js"></script>
+		<script src="Scores.js"></script>
+        <script src="Game.js"></script>
+		<script src="testScoring.js"></script>
+
+		</head>
+
+    <body>
+        
+        <div id="columnsHolder">
+			
+	        <div id="leftie">
+	            {{{LeftieContents}}}
+
+				<div id="customizePane" name="{{{myUsername}}}">
+						{{{CustomizePaneContents}}}
+				</div>
+
+			</div> 
+			
+			
+			<div id="rightie">
+				{{{RightieContents}}} 
+		    </div>
+        
+        </div> <!-- columnsHolder -->	
+		
+		<footer>
+			<p id="debug" class="noShow"> </p>
+			<p id="debugList" class="noShow"> </p>
+		</footer>
+		
+    </body>
+</html>

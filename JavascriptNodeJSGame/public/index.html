@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>DrawGrid Login with Javascript</title>
+        <meta name="description" content="Demo basics of HTML5 Canvas Object" />
+        <meta name="author" content="Charlie Calvert" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link href="index.css" rel="stylesheet" type="text/css">
+        <link href="testScoring.css" rel="stylesheet" type="text/css">
+        <script src="jquery.js"></script>
+        <script src="handlebars.js"></script>
+        <script src="index.js"></script>
+       	<!-- <script src="testScoring.js"></script> -->
+    </head>
+
+    <body>
+        
+        <div id="columnsHolder">
+        
+	        <div id="leftie">
+	            <header>
+	                <h1>Craig Mills -- DrawGrid: The Game</h1>
+	                <h2>Use the arrow keys to wander around the farm...</h2>
+	            	<h2>BUT you can't step on the X-shaped fenceposts!</h2>
+					<h3>(Reload the page to see a different random fencepost setting!)</h3>
+	            </header>
+	       
+	            <div>
+	                <canvas id="mainCanvas" width="325" height="325">
+	                    This text is displayed if your browser does not support HTML5 Canvas.
+	                </canvas>
+	            </div>
+				
+				<div id="statsContainer">
+					<div id="characterTraitsContainer">
+					<div><p id="charType">Type:</p></div>
+					<div><p id="moving">Moves so far: </p></div>
+					<div><p id="experience">Experience:</p></div>			
+					<div><p id="skills">Skills:</p></div>			
+					<!-- <div><p id="strength">Strength:</p></div> -->
+					</div>
+					
+					<div id="saveButtonContainer">
+						<input id="saveCharacter" type="submit" value="Save Character Status" />
+					</div>
+				</div>
+	
+			</div>	<!-- leftie -->
+			
+			<script type="text/x-handlebars-template" id="testBoilerplate">
+				{{{testingPaneContents}}}
+		        <p>Hello there, I'm Rightie</p>
+		    </script> 
+			
+			<div id="rightie">
+		    </div>
+        
+        </div> <!-- columnsHolder -->	
+		
+			<hr />
+			<div id="customizePane">
+				<!-- <input id="toggleTestModeButton" type="submit" value="Toggle Test Pane" />  -->
+				<a href="/launchTesting">Launch Combat Test Mode</a>             
+				<br />
+				Create Directory: <input type="text" name="newDirectory" value="NewFolder">
+				<input id="makeNewDirectory" type="submit" value="Create Directory" />
+			</div>
+
+			<p id="randX"> </p>
+			<p id="randY"> </p>
+            
+            <footer>
+                <p id="debugGrid"> </p>
+            </footer>
+        </div>
+        
+    </body>
+</html>

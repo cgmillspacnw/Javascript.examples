@@ -1,0 +1,10 @@
+{
+	"Name": "Uruk-hai",
+	"Type": "Orc",
+	"Moves": 0,
+	"Experience": 3,
+	"Health": 14,
+	"Strength": 15,
+	"Skills": 1
+}
+

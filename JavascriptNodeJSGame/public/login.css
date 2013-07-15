@@ -1,0 +1,23 @@
+html
+{
+	height: 100%;
+}
+body
+{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 1.5em;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.inputty {
+	color: purple;
+	background-color: #E9CAEB;
+	margin: 20px;
+	padding: 25px;
+}
+.inputBox {
+	width:25em;
+	color: purple;
+	background-color: #EFEEE6;
+}
